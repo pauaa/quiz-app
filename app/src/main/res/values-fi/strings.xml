@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="http://schemas.android.com/tools">
+    <string name="app_name">Rocky-visa</string>
+    <string name="submit">Laske pisteeni</string>
+    <string name="title">Tervetuloa tekemään Rocky-visa!</string>
+    <string name="question1">1. Mikä on Rockyn kotikaupunki?</string>
+    <string name="question2">2. Mikä on Rockyn vaimon etunimi?</string>
+    <string name="question2hint">Vaimon nimi</string>
+    <string name="question3">3. Ketä vastaan Rocky on nyrkkeillyt?</string>
+    <string name="question4">4. Kuinka monta kertaa Rocky on tyrmätty elokuvissa?</string>
+    <string name="question5">5. Mikä on Rockyn pojan etunimi?</string>
+    <string name="question6">6. Mikä on 7. elokuvan nimi?</string>
+    <string name="question6hint">7. elokuvan nimi</string>
+    <string name="question7">7. Kuka/ketkä ovat olleet Rockyn valmentajia?</string>
+    <string name="question8">8. Mikä lauluista ei ole kuuluisa Rocky-elokuvista?</string>
+    <string name="question9">9. Missä Rocky kosi vaimoaan?</string>
+    <string name="question9answer1">Rockyn kotona</string>
+    <string name="question9answer2">Vaimon kotona</string>
+    <string name="question9answer3">Eläintarhassa</string>
+    <string name="question9answer4">Nyrkkeilykehässä</string>
+    <string name="question10">10. Mikä on Rockyn ravintolan nimi 6. ja 7. elokuvissa?</string>
+    <string name="question10hint">Ravintolan nimi</string>
+    <string name="result">Sait oikein <xliff:g example="10" id="rightAnswers">%d</xliff:g>/10</string>
+</resources>
