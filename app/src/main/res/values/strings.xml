@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Rocky Quiz</string>
+    <string name="submit">Calculate my score</string>
+    <string name="title">Welcome to take the Rocky Quiz!</string>
+
+    <string name="question1">1. What is Rocky\'s hometown?</string>
+    <string name="question1answer1">Philadelphia</string>
+    <string name="question1answer2">Boston</string>
+    <string name="question1answer3">New York</string>
+    <string name="question1answer4">Atlanta</string>
+
+    <string name="question2">2. What is the first name of Rocky\'s wife?</string>
+    <string name="question2hint">Name of his wife</string>
+    <string name="question2answer">Adrian</string>
+
+    <string name="question3">3. Against who has Rocky fought?</string>
+    <string name="question3answer1">Spider Rico</string>
+    <string name="question3answer2">Joe Frazier</string>
+    <string name="question3answer3">Ivan Drago</string>
+    <string name="question3answer4">Ray Mancini</string>
+
+    <string name="question4">4. How many times has Rocky been knocked out in the films?</string>
+    <integer name="question4answer">1</integer>
+
+    <string name="question5">5. What is the first name of Rocky\'s son?</string>
+    <string name="question5answer1">Rocky Junior</string>
+    <string name="question5answer2">Richard</string>
+    <string name="question5answer3">Robert</string>
+    <string name="question5answer4">Rolf</string>
+
+    <string name="question6">6. What is the name of the 7th film?</string>
+    <string name="question6hint">Name of the 7th film</string>
+    <string name="question6answer">Creed</string>
+
+    <string name="question7">7. Who have been Rocky\'s trainers?</string>
+    <string name="question7answer1">Mason Dixon</string>
+    <string name="question7answer2">Mickey Goldmill</string>
+    <string name="question7answer3">Apollo Creed</string>
+    <string name="question7answer4">Rocky Marciano</string>
+
+    <string name="question8">8. Which of the songs is NOT famous from Rocky films?</string>
+    <string name="question8answer1">Eye of the Tiger</string>
+    <string name="question8answer2">Gonna Fly Now</string>
+    <string name="question8answer3">Burning heart</string>
+    <string name="question8answer4">Untouchable</string>
+
+    <string name="question9">9. Where does Rocky propose to his future wife?</string>
+    <string name="question9answer1">At his home</string>
+    <string name="question9answer2">At her home</string>
+    <string name="question9answer3">In a zoo</string>
+    <string name="question9answer4">In a boxing ring</string>
+
+    <string name="question10">10. What is the name of the restaurant Rocky runs in movies 6 and 7?</string>
+    <string name="question10hint">Name of the restaurant</string>
+    <string name="question10answer">Adrian\'s</string>
+
+    <string name="result">You got right <xliff:g id="rightAnswers" example="10">%d</xliff:g>/10</string>
+</resources>
