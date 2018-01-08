@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.NumberPicker;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     int falseColor;
     int trueColor;
+    int score;
 
     TextView q1_textView;
     TextView q2_textView;
@@ -38,11 +40,35 @@ public class MainActivity extends AppCompatActivity {
     TextView q9_textView;
     TextView q10_textView;
 
+    TextView resultTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /* Create the app */
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initQuestions();
+        resultTextView = findViewById(R.id.result);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        /* Save instance state (score and score text) */
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("score", score);
+        savedInstanceState.putString("scoreText", (String) resultTextView.getText());
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        /* Restore the saved state in case of restore */
+        super.onRestoreInstanceState(savedInstanceState);
+        score = savedInstanceState.getInt("score");
+        String oldScoreText = savedInstanceState.getString("scoreText");
+        if (oldScoreText != "") {
+            displayText(oldScoreText);
+            calculateScore();
+        }
     }
 
     private void initQuestions() {
@@ -64,7 +90,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Question 1
         RadioButton q1right = findViewById(R.id.q1right);
-        question1 = new RadioQuestion(q1_textView, falseColor, trueColor, q1right);
+        RadioGroup q1group = findViewById(R.id.q1group);
+        question1 = new RadioQuestion(q1_textView, falseColor, trueColor, q1group, q1right);
 
         // Question 2
         TextView q2answer = findViewById(R.id.q2);
@@ -81,7 +108,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Question 5
         RadioButton q5right = findViewById(R.id.q5right);
-        question5 = new RadioQuestion(q5_textView, falseColor, trueColor, q5right);
+        RadioGroup q5group = findViewById(R.id.q5group);
+        question5 = new RadioQuestion(q5_textView, falseColor, trueColor, q5group, q5right);
 
         // Question 6
         TextView q6answer = findViewById(R.id.q6);
@@ -94,11 +122,13 @@ public class MainActivity extends AppCompatActivity {
 
         // Question 8
         RadioButton q8right = findViewById(R.id.q8right);
-        question8 = new RadioQuestion(q8_textView, falseColor, trueColor, q8right);
+        RadioGroup q8group = findViewById(R.id.q8group);
+        question8 = new RadioQuestion(q8_textView, falseColor, trueColor, q8group, q8right);
 
         // Question 9
         RadioButton q9right = findViewById(R.id.q9right);
-        question9 = new RadioQuestion(q9_textView, falseColor, trueColor, q9right);
+        RadioGroup q9group = findViewById(R.id.q9group);
+        question9 = new RadioQuestion(q9_textView, falseColor, trueColor, q9group, q9right);
 
         // Question 10
         TextView q10answer = findViewById(R.id.q10);
@@ -122,15 +152,35 @@ public class MainActivity extends AppCompatActivity {
         return score;
     }
 
+    private void displayText(String textToDisplay) {
+        /* Display text */
+        resultTextView.setText(textToDisplay);
+    }
+
     private void displayScore(int score) {
         /* Display the score */
-        TextView resultTextView = findViewById(R.id.result);
-        resultTextView.setText(getString(R.string.result, score));
+        displayText(getString(R.string.result, score));
     }
 
     public void submit(View view) {
         /* Submit the quiz */
-        int score = calculateScore();
+        score = calculateScore();
         displayScore(score);
+    }
+
+    public void resetQuiz(View view) {
+        /* Reset the questions and the score */
+        // Score to 0
+        score = 0;
+        displayScore(score);
+
+        // Reset questions' answers
+        for (Question question : questions) question.resetAnswer();
+
+        // Reset questions' colors
+        for (Question question : questions) question.setTrueColor();
+
+        // Reset text to display
+        displayText("");
     }
 }

@@ -56,4 +56,5 @@
     <string name="question10answer" translatable="false">Adrian\'s</string>
 
     <string name="result">You got right <xliff:g id="rightAnswers" example="10">%d</xliff:g>/10</string>
+    <string name="reset">Reset quiz</string>
 </resources>

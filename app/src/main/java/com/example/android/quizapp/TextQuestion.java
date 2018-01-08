@@ -21,7 +21,13 @@ public class TextQuestion extends Question {
     }
 
     public boolean isCorrect() {
+        /* Check if the answer is correct */
         String answer = input.getText().toString();
         return answer.equals(rightAnswer);
+    }
+
+    public void resetAnswer() {
+        /* Clear the text answer */
+        input.setText("");
     }
 }

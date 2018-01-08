@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class NumberQuestion extends Question {
     private int rightAnswer;
     private NumberPicker input;
+    private int minValue;
 
     NumberQuestion(TextView labelView,
                           int falseColor,
@@ -21,12 +22,19 @@ public class NumberQuestion extends Question {
         super(labelView, falseColor, trueColor);
         this.rightAnswer = rightAnswer;
         this.input = input;
+        this.minValue = minValue;
         input.setMinValue(minValue);
         input.setMaxValue(maxValue);
     }
 
     public boolean isCorrect() {
+        /* Check if the selected number is correct */
         int answer = input.getValue();
         return answer == rightAnswer;
+    }
+
+    public void resetAnswer() {
+        /* Reset the answer by setting the minimum value in */
+        input.setValue(minValue);
     }
 }

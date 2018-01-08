@@ -21,4 +21,5 @@
     <string name="question10">10. Mikä on Rockyn ravintolan nimi 6. ja 7. elokuvissa?</string>
     <string name="question10hint">Ravintolan nimi</string>
     <string name="result">Sait oikein <xliff:g example="10" id="rightAnswers">%d</xliff:g>/10</string>
+    <string name="reset">Tyhjennä vastaukset</string>
 </resources>

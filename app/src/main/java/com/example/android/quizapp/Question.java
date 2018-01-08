@@ -40,5 +40,7 @@ public class Question {
         setColor(trueColor);
     }
 
+    void resetAnswer() {}
+
 }
 

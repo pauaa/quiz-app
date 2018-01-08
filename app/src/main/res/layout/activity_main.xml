@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_alignParentTop="true"
-                android:alpha=".7"
+                android:alpha=".3"
                 android:scaleType="centerCrop"
                 android:src="@drawable/rocky2" />
 
@@ -47,7 +47,9 @@
                 style="@style/QuestionStyle"
                 android:text="@string/question1" />
 
-            <RadioGroup style="@style/RowOfAnswers">
+            <RadioGroup
+                android:id="@+id/q1group"
+                style="@style/RowOfAnswers">
 
                 <RadioButton
                     android:id="@+id/q1right"
@@ -55,7 +57,6 @@
                     android:text="@string/question1answer1" />
 
                 <RadioButton
-                    android:tag="abc"
                     style="@style/RadioButton"
                     android:text="@string/question1answer2" />
 
@@ -82,7 +83,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
-                android:scaleType="fitStart"
+                android:layout_gravity="center"
                 android:src="@drawable/adrian" />
 
             <EditText
@@ -152,10 +153,12 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
-                android:scaleType="fitStart"
+                android:layout_gravity="center"
                 android:src="@drawable/robert" />
 
-            <RadioGroup style="@style/RowOfAnswers">
+            <RadioGroup
+                android:id="@+id/q5group"
+                style="@style/RowOfAnswers">
 
                 <RadioButton
                     style="@style/RadioButton"
@@ -235,7 +238,9 @@
                 style="@style/QuestionStyle"
                 android:text="@string/question8" />
 
-            <RadioGroup style="@style/RowOfAnswers">
+            <RadioGroup
+                android:id="@+id/q8group"
+                style="@style/RowOfAnswers">
 
                 <RadioButton
                     style="@style/RadioButton"
@@ -266,7 +271,9 @@
                 style="@style/QuestionStyle"
                 android:text="@string/question9" />
 
-            <RadioGroup style="@style/RowOfAnswers">
+            <RadioGroup
+                android:id="@+id/q9group"
+                style="@style/RowOfAnswers">
 
                 <RadioButton
                     style="@style/RadioButton"
@@ -319,9 +326,10 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/submit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
@@ -329,6 +337,20 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:text="@string/submit"
+                android:textColor="@color/lightTextColor" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/submit"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:onClick="resetQuiz"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/reset"
                 android:textColor="@color/lightTextColor" />
 
         </RelativeLayout>
